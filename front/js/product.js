@@ -73,7 +73,7 @@ function addingToCart(article) { //fonction pour ajouter un article au panier
         if (quant > 0 && quant <= 100 && quant != 0) {//si la quantité choisie est supérieure à 0, inférieure à 100 et inégale à 0 :
             if (!articleColor) { //si aucune couleur n'a été choisie :
                 alert("Couleur non définie, veuillez saisir une valeur pour continuer.");
-                return;
+                return false;
             }
 
             const productInfos = { //création d'un tableau comprenant des informations sur le produit qui nous seront utile plus des vérifications plus bas
@@ -133,7 +133,7 @@ function addingToCart(article) { //fonction pour ajouter un article au panier
 
         else { //si les quantités ne sont pas comprises entre 0 et 100 :
             alert("Nombre d'articles incorrect, veuillez saisir une valeur comprise entre 1 et 100.");
-            return;
+            return false;
         }
     });
 }
